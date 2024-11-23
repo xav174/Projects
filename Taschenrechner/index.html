@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taschenrechner</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+</head>
+<body>
+    <div class="container">
+        <input type="text" class="display" id="display">
+        <div class="number-container">
+            <button class="btn" onclick="appendNumber('7')">7</button>
+            <button class="btn" onclick="appendNumber('8')">8</button>
+            <button class="btn" onclick="appendNumber('9')">9</button>
+            <button class="btn operator" onclick="addOperator('/')"><i class="fa-solid fa-divide"></i></button>
+
+            <button class="btn" onclick="appendNumber('4')">4</button>
+            <button class="btn" onclick="appendNumber('5')">5</button>
+            <button class="btn" onclick="appendNumber('6')">6</button>
+            <button class="btn operator" onclick="addOperator('*')"><i class="fa-solid fa-xmark"></i></button>
+            
+            <button class="btn" onclick="appendNumber('1')">1</button>
+            <button class="btn" onclick="appendNumber('2')">2</button>
+            <button class="btn" onclick="appendNumber('3')">3</button>
+            <button class="btn operator" onclick="addOperator('-')"><i class="fa-solid fa-minus"></i></button>
+            
+            <button class="btn operator" onclick="clearDisplay()"><i class="fa-solid fa-c"></i></button>
+            <button class="btn" onclick="appendNumber('0')">0</button>
+            <button class="btn operator" onclick="evaluateResult()"><i class="fa-solid fa-equals"></i></button>
+            <button class="btn operator" onclick="addOperator('+')"><i class="fa-solid fa-plus"></i></button>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
