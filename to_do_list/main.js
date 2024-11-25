@@ -1,7 +1,9 @@
-let btn = document.getElementById("addButton");
+const btn = document.getElementById("addButton");
+const input = document.getElementById("text")
 btn.addEventListener('click', addToDo);
 
 function addToDo() {
+
     const note = document.querySelector('#text').value;
     if (note.trim() === '') return // Leere Einträge werden ignoriert
     const list = document.querySelector('ul'); 
@@ -21,36 +23,21 @@ function addToDo() {
         list.removeChild(listItem);
     });
 
-    //Erstellt ein edit Button zum Bearbeiten
-    const editButton = document.createElement('button');
-    editButton.innerHTML = "edit";
-    editButton.className = "edit-button"; // gibt editButton eine Klasse
-    editButton.addEventListener('click', liToList)
-
-    function liToList() {
-        const input = document.createElement("input");
-        input.type = "text";
-        input.value = listItem.textContent; // li-Item Text in das Textfeld einfügen
-
-        list.replaceChild(input, listItem);
-
-        input.addEventListener("blur", function() {
-            listItem.textContent = input.value;
-            addButtons(listItem);
-            list.replaceChild(listItem, input);
-          });
-    }
+    listOfItems.addEventListener('click', function(e){
+        if (e.target.tagName === 'LI') {
+            e.target.classList.toggle("checked");
+        }
+    }); 
 
     //Buttons hinzufügen
     function addButtons(item) {
         item.innerHTML = note;
-        item.appendChild(editButton);
         item.appendChild(deleteButton);
     }
 
     addButtons(listItem);
 
     list.appendChild(listItem);
-    document.querySelector('#text').value = '';
+    input.value = '';
 
 }

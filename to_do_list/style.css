@@ -1,13 +1,14 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Knewave", Arial;
+    font-family: Arial;
 }
 body {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    background-color: #F1F0E8;
 }
 
 .container {
@@ -16,29 +17,33 @@ body {
     align-items: center;
     background-color: #89A8B2;
     width: 500px;
-    height: 650px;
     border-radius: 14px;
     border: none;
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
+.container h2 {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
 
 .input-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    background-color: white;
+    padding-left: 20px;
+    border-radius: 20px;
     width: 400px;
 }
 .text {
     flex: 1;
     border: none;
+    outline: none;
     height: 40px;
     border-radius: 18px;
-    padding-left: 10px;
     font-size: 14px;
     font-weight: lighter;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
-
 }
 .addButton {
     border: none;
@@ -61,10 +66,10 @@ body {
 }
 
 .item-container {
-    margin-top: 14px;
-    background-color: #F1F0E8;
+    margin: 15px auto 20px;
+    background-color: white;
     width: 450px;
-    height: 550px;
+    min-height: 10vh;
     border-radius: 12px;
     transform: rotate(deg);
 }
@@ -73,17 +78,43 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    gap: 15px;
+    margin-top: 12px;
+    position: relative;
+}
+.listOfItems li {
+    padding: 0 0 12px 0;
+    list-style: none;
+    cursor: pointer;
+}
+.listOfItems li::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(assets/uncheck.svg);
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+    cursor: pointer;
+}
+.listOfItems .checked {
+    color: #555;
+    text-decoration: line-through;
+}
+.listOfItems .checked::before {
+    background-image: url(assets/check.svg);
 }
 
 .delete-button {
     border: none;
-    margin-left: 13px;
     color: red;
     font-weight: bold;
     font-size: 16px;
     transition: transform 0.15s;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 10px;
 
 }
 .delete-button:hover {
