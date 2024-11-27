@@ -74,7 +74,6 @@ body {
     transform: rotate(deg);
 }
 .listOfItems li {
-    width: 100%;
     padding: 10px 10px 7px 50px;
     list-style: none;
     user-select: none;
@@ -112,9 +111,6 @@ body {
     transition: transform 0.15s;
     background: transparent;
     cursor: pointer;
-    margin-left: 10px;
-    margin-right: 12vh;
-
 }
 .delete-button:hover {
     transform: scale(1.25) rotate(30deg);

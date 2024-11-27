@@ -2,10 +2,16 @@ const btn = document.getElementById("addButton");
 const input = document.getElementById("text")
 const listContainer = document.getElementById("listOfItems"); 
 btn.addEventListener('click', addToDo);
+input.addEventListener('keypress', function(event){
+    if (event.key === "Enter") {
+        event.preventDefault();
+        btn.click();
+    }
+});
 
 function addToDo() {
     if(input.value === ""){
-        alert("You must write something");
+        alert("Keine ToDo vorhanden");
     }
     else{
         // Listen Element erstellen
