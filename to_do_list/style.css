@@ -99,6 +99,7 @@ body {
     color: #555;
     text-decoration: line-through;
 }
+
 .listOfItems .checked::before {
     background-image: url(assets/check.svg);
 }
