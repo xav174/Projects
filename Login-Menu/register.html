@@ -8,24 +8,24 @@
 </head>
 <body>
     <div class="container">
-
         <h1>Sign Up</h1>
-        <div class="form-container">
-            <label for="text">Name:</label>
-            <input type="text" placeholder="Type your name">
+        <form action="" class="form">
+            <div class="form-container">
+                <label for="form-name">Name:</label>
+                <input type="text" id="form-name" placeholder="Type your name">
+    
+                <label for="form-lname">Last name:</label>
+                <input type="text" id="form-lname" placeholder="Type your last name">
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Type your email adress">
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Type your password">
+            </div>
+            <input class="btn" type="submit" value="sign up"> 
+        </form>  
 
-            <label for="text">Last name:</label>
-            <input type="text" placeholder="Type your last name">
-
-            <label for="email">Email:</label>
-            <input type="email" placeholder="Type your email adress">
-
-            <label for="password">Password:</label>
-            <input type="password" placeholder="Type your password">
-        </div>
-        <a href="register.html">
-            <button class="register-btn btn">sign up</button>    
-        </a>
         <a href="login.html">
             <button class="login-btn">login</button>
         </a>
