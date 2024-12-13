@@ -1,0 +1,151 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+
+    margin-left: 20px;
+
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.left-section .logo-section {
+    background-color: darkblue;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.middle-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 550px;
+}
+
+.searchbar-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    background-color: #EEEEEE;
+    border-radius: 20px;
+}
+.searchbar {
+    flex: 1;
+    height: 40px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.005);
+    background-color: transparent;
+}
+
+.searchbar::placeholder {
+    font-size: 14px;
+}
+.searchbar:focus {
+    outline: none;
+}
+
+.search-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.search-btn:hover {
+    opacity: 0.4;
+    transform: scale(1.25);
+}
+.search-btn:active {
+    transform: scale(1);
+}
+
+.search-icon {  
+    height: 25px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.right-section li {
+    list-style: none;
+    padding: 0 10px 0 10px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.right-section li hr {
+    border: 1px solid black;
+    display: none;
+}
+.right-section li:hover hr {
+    display: block;
+}
+.right-section li:hover {
+    color: #575757;
+}
+.right-section .dropdown:hover ul{
+    color: black;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+.right-section > li {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.4s ease, height 0.4s ease;
+    padding-top: 10px;
+}
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 15px;
+    font-size: 13px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #575757;
+    color: white;
+    border-radius: 20px;
+  }
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    height: 145px;
+}
