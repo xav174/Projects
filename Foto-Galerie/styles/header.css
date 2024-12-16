@@ -1,13 +1,33 @@
+:root {
+    --hover-color: rgb(227, 227, 227);
+}
 .header {
     display: flex;
     justify-content: space-between;
     height: 65px;
+    background-color: white;
 
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
+}
+.scroll-watcher {
+    height: 8px;
+    position: fixed;
+    background-color: darkgray;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+
+    animation: scroll-watcher linear ;
+    animation-timeline: scroll();
+}
+@keyframes scroll-watcher {
+    to{scale: 1 1;}
 }
 
 .left-section {
@@ -22,7 +42,7 @@
 }
 
 .left-section .logo-section {
-    background-color: darkblue;
+    background-color: darkgray;
     width: 45px;
     height: 45px;
     border: none;
@@ -53,6 +73,7 @@
     border-radius: 20px;
     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.005);
     background-color: transparent;
+    transition: background-color 0.15s ease;
 }
 
 .searchbar::placeholder {
@@ -60,6 +81,9 @@
 }
 .searchbar:focus {
     outline: none;
+}
+.searchbar:hover {
+    background-color: var(--hover-color);
 }
 
 .search-btn {
@@ -75,7 +99,6 @@
     transition: all 0.15s;
 }
 .search-btn:hover {
-    opacity: 0.4;
     transform: scale(1.25);
 }
 .search-btn:active {
@@ -102,10 +125,13 @@
 }
 .right-section li hr {
     border: 1px solid black;
-    display: none;
+    opacity: 0;
+    width: 0px;
+    transition: width 0.15s ease, opacity 0.15s ease;
 }
 .right-section li:hover hr {
-    display: block;
+    opacity: 1;
+    width: 100%;
 }
 .right-section li:hover {
     color: #575757;
@@ -147,5 +173,8 @@ a {
 
 .dropdown:hover .dropdown-menu {
     opacity: 1;
-    height: 145px;
+    height: 140px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
