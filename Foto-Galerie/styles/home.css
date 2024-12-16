@@ -9,9 +9,6 @@
     max-width: 100%;
     height: 100svh;
     overflow: hidden;
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.15s ease-in, transform 0.15s ease;
 }
 .home-wrapper .home-background-img {
     position: absolute;
@@ -31,9 +28,15 @@
     font-family: "Sacramento", cursive;
 }
 
-.show {
-    opacity: 1;
-    transform: scale(1);
+.fade-animation {
+    opacity: 0; /* Startzustand */
+    transform: scale(0.8);
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Sanfte Animation */
 }
 
-  
+.fade-animation.show {
+    opacity: 1; /* Sichtbar */
+    transform: scale(1); /* Endposition */
+}
+
+

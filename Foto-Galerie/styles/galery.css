@@ -1,0 +1,31 @@
+.galery-wrapper {
+    margin-top: 100px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 4px;
+    gap: 10px;
+}
+
+.column {
+    flex: 1;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.fade-animation2 {
+    opacity: 0; /* Startzustand */
+    transform: translateY(-20px);
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Sanfte Animation */
+}
+
+.fade-animation2.show2 {
+    opacity: 1; /* Sichtbar */
+    transform: translateY(0); /* Endposition */
+}
