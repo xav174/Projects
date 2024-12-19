@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foto-Galerie</title>
+    <link rel="stylesheet" href="styles/body.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/body.css">
     <link rel="stylesheet" href="styles/galery.css">
+    <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="styles/mediaqueries.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet"> 
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
 </head>
 <body>
     <header class="header">
@@ -32,9 +41,9 @@
         </div>
 
         <ul class="right-section">
-            <li><a href="#home">Home </a><hr></li>
+            <li><a href="#home">Home</a><hr></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle">Explore </a><hr>
+                <a href="#explore" class="dropdown-toggle">Explore</a><hr>
                 <ul class="dropdown-menu">
                     <li><a href="#">Today</a></li>
                     <li><a href="#">Images</a></li>
@@ -42,8 +51,8 @@
                     <li><a href="#">Backgrounds</a></li>
                 </ul>
             </li>
-            <li><a href="#">About </a><hr></li>
-            <li><a href="#">Contact </a><hr></li>
+            <li><a href="#about">About </a><hr></li>
+            <li><a href="#contact">Contact </a><hr></li>
         </ul>
     </header>
 
@@ -55,7 +64,7 @@
             </div>
         </div>
     </section>
-
+    <h3 id="explore"></h3>
     <div class="galery-wrapper">
         <div class="row"> 
             <div class="column">
@@ -84,7 +93,64 @@
             </div>
         </div>
     </div>
+    <section class="about-section" id="about">
+        <h3>About Us</h3>
 
+        <div class="about-content">
+
+            <b>Monochrome Moments</b> ist mehr als nur eine Online-Fotogalerie. Es ist ein Raum, in dem die Zeit stillsteht und Bilder Geschichten erzählen,
+            <br> die im Herzen widerhallen. Unsere Leidenschaft gehört der Schwarz-Weiß-Fotografie – der Kunst, Emotionen durch Licht, Schatten und Kontrast sichtbar zu machen.
+
+            <br><br>In einer Welt voller Farben fokussieren wir uns auf das Wesentliche: klare Linien, rohe Details und die zeitlose Schönheit des Monochromen. 
+            <br>Jedes Bild, das du hier findest, ist ein Tribut an die Kraft der Reduktion. Ohne Ablenkung durch Farben lenken Schwarz und Weiß die Aufmerksamkeit auf das,<br> was wirklich zählt:
+            Stimmungen, Strukturen und Augenblicke.
+
+            <br><br>Unsere Galerie vereint Werke von Künstlern, die das Einfache in seiner reinsten Form schätzen. <br>Ob Naturaufnahmen, Straßenfotografie oder abstrakte Kunst – jedes Foto auf <b>Monochrome Moments</b> ist eine Einladung zum Innehalten und Nachdenken.
+
+            <br><br>Lass dich inspirieren von der stillen Eleganz und der Tiefe der Schwarz-Weiß-Fotografie. <br>Denn manchmal braucht es keine Farben, um das Leben in all seiner Intensität zu zeigen.
+
+            <br><b>Monochrome Moments – Wo Schatten und Licht Geschichten schreiben.</b>
+
+
+        </div>
+
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-left">
+            <img src="assets/email-symbol.png" alt="">
+        </div>
+
+        <div class="contact-right">
+            <form class="contact-form" action="">
+                <h3>Get in touch</h3>
+                
+                <div class="input-container">
+                    <input type="text" id="name" placeholder="Name">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                
+                <div class="input-container">
+                    <input type="text" id="lname" placeholder="Last name">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                
+                <div class="input-container">
+                    <input type="email" id="email" placeholder="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+    
+                <div class="input-container">
+                    <textarea name="message" id="message" placeholder="Messsage"></textarea>
+                    <i class="fa-solid fa-message message-icon"></i>
+                </div>
+                
+    
+                <button class="submit-btn" type="submit">Submit</button>
+                
+            </form>
+        </div>
+    </section>
 
     <script src="main.js"></script>
 </body>

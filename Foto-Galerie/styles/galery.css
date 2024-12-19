@@ -21,11 +21,9 @@
 
 .fade-animation2 {
     opacity: 0; /* Startzustand */
-    transform: translateY(-20px);
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Sanfte Animation */
+    transition: opacity 0.6s ease; /* Sanfte Animation */
 }
 
 .fade-animation2.show2 {
     opacity: 1; /* Sichtbar */
-    transform: translateY(0); /* Endposition */
 }
