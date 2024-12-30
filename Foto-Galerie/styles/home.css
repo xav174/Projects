@@ -22,7 +22,7 @@
 .home-background-text {
     grid-area: 1/1;
     color: white;
-    font-size: 60px;
+    font-size: clamp(1rem, -0.33rem + 6.67vw, 4rem);
     font-family: "Sacramento", cursive;
 }
 

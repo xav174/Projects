@@ -54,6 +54,9 @@
             <li><a href="#about">About </a><hr></li>
             <li><a href="#contact">Contact </a><hr></li>
         </ul>
+        <div class="menu-icon">
+            <i class="fas fa-bars" id="menu-btn"></i>
+        </div>
     </header>
 
     <section class="main-body">
@@ -97,21 +100,20 @@
         <h3>About Us</h3>
 
         <div class="about-content">
-
-            <b>Monochrome Moments</b> ist mehr als nur eine Online-Fotogalerie. Es ist ein Raum, in dem die Zeit stillsteht und Bilder Geschichten erzählen,
-            <br> die im Herzen widerhallen. Unsere Leidenschaft gehört der Schwarz-Weiß-Fotografie – der Kunst, Emotionen durch Licht, Schatten und Kontrast sichtbar zu machen.
-
-            <br><br>In einer Welt voller Farben fokussieren wir uns auf das Wesentliche: klare Linien, rohe Details und die zeitlose Schönheit des Monochromen. 
-            <br>Jedes Bild, das du hier findest, ist ein Tribut an die Kraft der Reduktion. Ohne Ablenkung durch Farben lenken Schwarz und Weiß die Aufmerksamkeit auf das,<br> was wirklich zählt:
-            Stimmungen, Strukturen und Augenblicke.
-
-            <br><br>Unsere Galerie vereint Werke von Künstlern, die das Einfache in seiner reinsten Form schätzen. <br>Ob Naturaufnahmen, Straßenfotografie oder abstrakte Kunst – jedes Foto auf <b>Monochrome Moments</b> ist eine Einladung zum Innehalten und Nachdenken.
-
-            <br><br>Lass dich inspirieren von der stillen Eleganz und der Tiefe der Schwarz-Weiß-Fotografie. <br>Denn manchmal braucht es keine Farben, um das Leben in all seiner Intensität zu zeigen.
-
-            <br><b>Monochrome Moments – Wo Schatten und Licht Geschichten schreiben.</b>
-
-
+            <P>
+                <b>Monochrome Moments</b> ist mehr als nur eine Online-Fotogalerie. Es ist ein Raum, in dem die Zeit stillsteht und Bilder Geschichten erzählen,
+                <br> die im Herzen widerhallen. Unsere Leidenschaft gehört der Schwarz-Weiß-Fotografie – der Kunst, Emotionen durch Licht, Schatten und Kontrast sichtbar zu machen.
+    
+                <br><br>In einer Welt voller Farben fokussieren wir uns auf das Wesentliche: klare Linien, rohe Details und die zeitlose Schönheit des Monochromen. 
+                <br>Jedes Bild, das du hier findest, ist ein Tribut an die Kraft der Reduktion. Ohne Ablenkung durch Farben lenken Schwarz und Weiß die Aufmerksamkeit auf das,<br> was wirklich zählt:
+                Stimmungen, Strukturen und Augenblicke.
+    
+                <br><br>Unsere Galerie vereint Werke von Künstlern, die das Einfache in seiner reinsten Form schätzen. <br>Ob Naturaufnahmen, Straßenfotografie oder abstrakte Kunst – jedes Foto auf <b>Monochrome Moments</b> ist eine Einladung zum Innehalten und Nachdenken.
+    
+                <br><br>Lass dich inspirieren von der stillen Eleganz und der Tiefe der Schwarz-Weiß-Fotografie. <br>Denn manchmal braucht es keine Farben, um das Leben in all seiner Intensität zu zeigen.
+    
+                <br><b>Monochrome Moments – Wo Schatten und Licht Geschichten schreiben.</b>
+            </P>
         </div>
 
     </section>
@@ -122,26 +124,27 @@
         </div>
 
         <div class="contact-right">
-            <form class="contact-form" action="">
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
                 <h3>Get in touch</h3>
+                <input type="hidden" name="access_key" value="a4290835-156b-4aa0-bbc4-bcad8544b0f3">
                 
                 <div class="input-container">
-                    <input type="text" id="name" placeholder="Name">
+                    <input name="name" type="text" id="name" placeholder="Name" required>
                     <i class="fa-solid fa-user"></i>
                 </div>
                 
                 <div class="input-container">
-                    <input type="text" id="lname" placeholder="Last name">
+                    <input name="lname" type="text" id="lname" placeholder="Last name" required>
                     <i class="fa-solid fa-user"></i>
                 </div>
                 
                 <div class="input-container">
-                    <input type="email" id="email" placeholder="Email">
+                    <input name="email" type="email" id="email" placeholder="Email" required>
                     <i class="fa-solid fa-envelope"></i>
                 </div>
     
                 <div class="input-container">
-                    <textarea name="message" id="message" placeholder="Messsage"></textarea>
+                    <textarea name="message" id="message" placeholder="Messsage" required></textarea>
                     <i class="fa-solid fa-message message-icon"></i>
                 </div>
                 

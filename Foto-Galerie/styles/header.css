@@ -55,6 +55,8 @@
     align-items: center;
     flex: 1;
     max-width: 550px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .searchbar-section {
@@ -177,4 +179,27 @@ a {
     background-color: white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    display: none;
+}
+
+
+#menu-btn {
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.25s;
+}
+#menu-btn:hover {
+    transform: scale(1.07);
+    transition: transform 0.15s;
+}
+
+.header .right-section.active {
+    height: 350px;
 }

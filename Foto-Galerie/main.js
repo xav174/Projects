@@ -63,6 +63,7 @@ setScrollVar()
 //   observer.observe(fadeElements);
 // });
 
+//Fade-Animation für die Galerie
 const fadeElements2 = document.querySelectorAll(".fade-animation2");
 
 const observer2 = new IntersectionObserver((entries) => {
@@ -77,3 +78,13 @@ const observer2 = new IntersectionObserver((entries) => {
 fadeElements2.forEach(fadeElements2 => {
   observer2.observe(fadeElements2);
 });
+
+
+//toggle für navbar 
+
+let responsiveNavbar = document.querySelector(".right-section");
+let menuBtn = document.getElementById("menu-btn");
+
+menuBtn.onclick = () => {
+  responsiveNavbar.classList.toggle("active");
+};
