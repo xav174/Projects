@@ -1,17 +1,13 @@
-.main-body {
+.home-wrapper {
     display: flex;
     justify-content: center;
-}
-.home-wrapper {
-    display: grid;
-    place-items: center;
+    align-items: center;
     position: relative;
     max-width: 100%;
     height: 100svh;
     overflow: hidden;
 }
 .home-wrapper .home-background-img {
-    grid-area: 1/1;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -20,7 +16,7 @@
 
 }
 .home-background-text {
-    grid-area: 1/1;
+    position: absolute;
     color: white;
     font-size: clamp(1rem, -0.33rem + 6.67vw, 4rem);
     font-family: "Sacramento", cursive;
