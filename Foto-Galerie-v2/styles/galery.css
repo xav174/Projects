@@ -1,5 +1,5 @@
 .galery-wrapper {
-    margin-top: 100px;
+    margin-top: 150px;
     overflow: none;
 }
 .row {
@@ -27,4 +27,17 @@
 
 .fade-animation2.show2 {
     opacity: 1; /* Sichtbar */
+}
+
+.explore-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.explore-header h2 {
+    text-align: center;
+    width: 20rem;
+    font-size: 40px;
+    font-weight: 300;
+    border-radius: 25px;
 }

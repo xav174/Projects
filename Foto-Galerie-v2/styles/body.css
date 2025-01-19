@@ -7,5 +7,5 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    margin-bottom: 308px;
+    overflow-x: hidden;
 }
