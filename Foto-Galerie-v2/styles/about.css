@@ -16,7 +16,7 @@
 
 h2 {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     font-family: "DM Serif Display", serif;
 }
 
@@ -61,7 +61,6 @@ h2 {
 }
 .contact-form h2 {
     margin-bottom: 10px;
-    font-family: "DM Serif Display";
 }
 
 .contact-form input, textarea {
