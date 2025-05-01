@@ -5,13 +5,13 @@ datei_typ = {
     ".pdf": "PDF_Dateien",
     ".jpg": "Bilder",
     ".jpeg": "Bilder",
+    ".png": "Bilder",
     ".docx": "Office_Dokumente",
     ".pptx": "Office_Dokumente",
     ".xlsx": "Office_Dokumente",
     ".zip": "Zip_Dateien",
     ".scala": "Scala_Dateien",
     ".py": "Python_Dateien",
-    
 }
 
 ordner_pfad = "/Users/xavierjiang/Downloads"
