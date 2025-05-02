@@ -9,6 +9,7 @@ datei_typ = {
     ".docx": "Office_Dokumente",
     ".pptx": "Office_Dokumente",
     ".xlsx": "Office_Dokumente",
+    ".pages": "Office_Dokumente",
     ".zip": "Zip_Dateien",
     ".scala": "Scala_Dateien",
     ".py": "Python_Dateien",
@@ -29,12 +30,12 @@ for datei in dateien:
         continue
     
     #Dateityp bestimmen
-    root, ext = os.path.splitext(datei)
-    ext = ext.lower()
+    root, extansion = os.path.splitext(datei)
+    extansion = extansion.lower()
     
     #Prüfen ob Dateityp im Dictonary vorhanden
-    if ext in datei_typ:
-        zielordner = os.path.join(ordner_pfad, datei_typ[ext])
+    if extansion in datei_typ:
+        zielordner = os.path.join(ordner_pfad, datei_typ[extansion])
         
         #Zielordner erstellen falls noch nicht vorhanden
         if not os.path.exists(zielordner):
