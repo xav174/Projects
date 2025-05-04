@@ -70,7 +70,7 @@ def ordner_sortieren():
 #Fenster erstellen
 fenster = tk.Tk()
 fenster.title("Datei_Organizer")
-fenster.geometry("400x200")
+fenster.geometry("600x300")
 
 ordner_var = tk.StringVar()
 
