@@ -1,0 +1,77 @@
+/* header-section  */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    height: 65px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+/* right navbar section */
+.right-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.right-navbar li {
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.right-navbar li:hover {
+    transform: scale(1.05);
+}
+.right-navbar li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s ease;
+}
+
+.right-navbar li:hover::before {
+    transform: scaleX(1);
+}
+.right-navbar li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* left navbar section */
+.left-navbar {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.left-navbar .email-icon {
+    margin-right: 15px;
+}
+
+/* hero-section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.profile-picture {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
