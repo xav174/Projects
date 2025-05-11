@@ -6,7 +6,8 @@
 
 body {
     background-color: white;
-    height: 1000px;
+    height: 200vh;
+    font-family: "DM Sans", serif;
 }
 
 html {
