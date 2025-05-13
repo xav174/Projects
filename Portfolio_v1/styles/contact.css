@@ -1,0 +1,25 @@
+.contact-section {
+    height: 100vh;
+    background-color: lightblue;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contect-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    
+}
