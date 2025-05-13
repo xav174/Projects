@@ -1,0 +1,46 @@
+/* media queries für header und here section */
+
+@media (max-width: 800px) {
+    .right-navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 0;
+        margin: 0;
+
+        flex-direction: column;
+        background-color: var(--highlight-color);
+        border: 1px solid black;
+
+        overflow: hidden;
+        transition: 0.25s ease-in;
+    }
+    .right-navbar li {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .hamburger-menu-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+
+        transition: 0.15s ease;
+    }
+    .hamburger-menu-btn i {
+        font-size: 20px;
+    }
+    .hamburger-menu-btn:hover {
+        transform: translate3d(1.25);
+        background-color: var(--highlight-color);
+    }
+
+    .left-navbar {
+        font-size: 14px;
+    }
+}

@@ -51,6 +51,15 @@
     color: black;
 }
 
+.hamburger-menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.right-navbar.visible {
+    height: 350px;
+}
+
 /* left navbar section */
 .left-navbar {
     display: flex;
@@ -69,9 +78,10 @@
     flex-direction: column;
     gap: 5vh;
     height: 100vh;
+
+    background-color: lightpink;
 }
-.profile-picture {
-}
+
 .profile-picture img {
     height: 110px;
     width: 110px;

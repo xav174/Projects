@@ -1,0 +1,37 @@
+.project-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: lightblue;
+    height: 100vh;
+}
+.project-section-title {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-areas: 
+    "a b c";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.projects {
+    height: 400px;
+    width: 400px;
+    background-color: grey;
+    margin-top: 20px;
+}
+.project1 {
+    grid-area: a;
+}
+.project2 {
+    grid-area: b;
+}
+.project3 {
+    grid-area: c;
+}
