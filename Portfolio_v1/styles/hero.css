@@ -71,10 +71,12 @@
     height: 100vh;
 }
 .profile-picture {
-    height: 100px;
-    width: 100px;
+}
+.profile-picture img {
+    height: 110px;
+    width: 110px;
     border-radius: 50%;
-    background-color: grey;
+    object-fit: cover;
 }
 
 .name-section {
