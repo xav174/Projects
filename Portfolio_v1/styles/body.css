@@ -5,13 +5,16 @@
 }
 
 body {
-    background-color: white;
+    background-color: var(--main-color);
     font-family: "DM Sans", serif;
     font-size: 16px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 :root {

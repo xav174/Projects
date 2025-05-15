@@ -1,6 +1,27 @@
 /* media queries für header und here section */
-
-@media (max-width: 800px) {
+@media screen and (max-width: 1150px) {
+    /* fade in von rechts */
+    .js-fade-animation-right {
+        transform: translateX(200px);
+        transition: 0.5s ease;
+        opacity: 0;
+    }
+    .js-fade-animation-right.showRight {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    /* fade in von links */
+    .js-fade-animation-left {
+        transform: translateX(-200px);
+        transition: 0.5s ease;
+        opacity: 0;
+    }
+    .js-fade-animation-left.showLeft {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 850px) {
     .right-navbar {
         position: absolute;
         top: 100%;
@@ -43,6 +64,10 @@
     .left-navbar {
         font-size: 14px;
     }
+
+    .about-section {
+        height: 155vh;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -64,5 +89,8 @@
         border: medium solid var(--main-color);
         border-width: 13px 13px 13px 0;
         border-color: transparent var(--highlight-color) transparent transparent;
+    }
+    .about-section {
+        height: 120vh;
     }
 }

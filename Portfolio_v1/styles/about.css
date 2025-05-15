@@ -1,12 +1,13 @@
 .about-section {
     height:120vh;
     background-color: var(--main-color);
-    padding-top: 70px;
 }
 .timeline-section {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    height: 100%;
+    padding-top: 80px;
 }
 /* fade in von rechts */
 .js-fade-animation-right {
