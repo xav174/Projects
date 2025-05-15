@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
 
-    background-color: lightblue;
+    background-color: var(--highlight-color);
     height: 100vh;
 }
 .project-section-title {
@@ -23,7 +23,7 @@
 .projects {
     height: 400px;
     width: 400px;
-    background-color: grey;
+    background-color: var(--main-color);
     margin-top: 20px;
 
     display: flex;

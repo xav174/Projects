@@ -15,7 +15,17 @@ html {
 }
 
 :root {
-    --highlight-color: lightgray;
-    --main-color: white;
-    --second-color: white;
+    --highlight-color: #C6E7FF;
+    --second-highlight-color: #D4F6FF;
+    --main-color: #FBFBFB;
+    --akzent-color: #FFDDAE;
+
+    /* --highlight-color: #C6E7FF;
+    --second-highlight-color: #D4F6FF;
+    --main-color: #FBFBFB;
+    --akzent-color: #FFDDAE; */
+}
+
+button, input {
+    border: none;
 }

@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: var(--main-color);
     height: 65px;
 
     position: fixed;
@@ -78,8 +78,7 @@
     flex-direction: column;
     gap: 5vh;
     height: 100vh;
-
-    background-color: lightpink;
+    background-color: var(--main-color);
 }
 
 .profile-picture img {
@@ -109,8 +108,8 @@
     border: none;
     padding: 18px 45px;
     border-radius: 25px;
-    background-color: black;
-    color: white;
+    background-color: var(--akzent-color);
+    color: black;
     font-size: 600;
     cursor: pointer;
     transition: 0.3s ease;
