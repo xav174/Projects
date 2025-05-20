@@ -69,6 +69,13 @@
 .left-navbar .email-icon {
     margin-right: 15px;
 }
+.left-navbar .email-icon i {
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.left-navbar .email-icon:hover i {
+    transform: scale(1.25);
+}
 
 /* hero-section */
 .hero-section {
