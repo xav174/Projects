@@ -1,0 +1,66 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Chivo", sans-serif;
+}
+
+/* navbar start */
+nav {
+  background-color: #111;
+  color: white;
+  padding: 20px 50px;
+}
+
+
+.navTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.contactMe {
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+}
+.contactMe:hover {
+    background-color: darkgrey;
+    color: white;
+}
+
+.navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+    font-size: 16px;
+}
+/* navbar end */
+/* slider start */
+.slider {
+    background-color: lightgrey;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+
+}
+.sliderWrapper {
+    display: flex;
+    width: 400vw;
+}
+.sliderItem {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
