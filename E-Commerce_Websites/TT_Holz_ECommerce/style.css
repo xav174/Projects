@@ -6,7 +6,7 @@ body {
 
 /* navbar start */
 nav {
-  background-color: #111;
+  background-color: #3b3c3d;
   color: white;
   padding: 20px 50px;
 }
@@ -29,10 +29,12 @@ nav {
     border: none;
     padding: 10px 25px;
     border-radius: 25px;
+    background-color: #00668c;
+    color: white;
 }
 .contactMe:hover {
-    background-color: darkgrey;
-    color: white;
+    background-color: #d4eaf7;
+    color: black;
 }
 
 .navBottom {
@@ -50,17 +52,58 @@ nav {
 /* navbar end */
 /* slider start */
 .slider {
-    background-color: lightgrey;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-
+    overflow: hidden;
+    
 }
 .sliderWrapper {
     display: flex;
     width: 400vw;
+    transition: all 1s ease-in-out;
 }
 .sliderItem {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.sliderItem img {
+    border-radius: 50%;
+}
+
+.sliderTitle{
+    position: absolute;
+    top: 10%;
+    right: 100px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.sliderPrice {
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+  color: black;
+  z-index: 1;
+}
+.buyBtn {
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: #00668c;
+    border-radius: 25px;
+    font-size: 24px;
+    cursor: pointer;
+    top: 50%;
+    right: 100px;
+}
+.buyBtn:hover {
+  background-color: #d4eaf7;
+  color: black;
 }
