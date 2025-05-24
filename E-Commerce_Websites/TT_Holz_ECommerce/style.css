@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: "Chivo", sans-serif;
+    font-family: "DM Sans", sans-serif;
 }
 
 /* navbar start */
@@ -54,6 +54,7 @@ nav {
 .slider {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
     overflow: hidden;
+    background-color: #f5f4f1;
     
 }
 .sliderWrapper {
@@ -70,7 +71,7 @@ nav {
 }
 
 .sliderItem img {
-    border-radius: 50%;
+    height: 1000px;
 }
 
 .sliderTitle{
@@ -90,6 +91,7 @@ nav {
   font-weight: 300;
   text-align: center;
   color: black;
+  border: 1px solid #00668c;
   z-index: 1;
 }
 .buyBtn {
