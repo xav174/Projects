@@ -178,6 +178,7 @@ nav {
 }
 .productPrice {
     font-weight: 400;
+    font-style: italic;
 }
 .productDesc {
     margin-top: 25px;
