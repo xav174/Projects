@@ -6,7 +6,7 @@ body {
 
 /* navbar start */
 nav {
-  background-color: #3b3c3d;
+  background-color: #313d44;
   color: white;
   padding: 20px 50px;
 }
@@ -22,7 +22,7 @@ nav {
     font-size: 30px;
 }
 
-.contactMe {
+.btn {
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
@@ -31,6 +31,7 @@ nav {
     border-radius: 25px;
     background-color: #00668c;
     color: white;
+    transition: all 0.25s ease;
 }
 .contactMe:hover {
     background-color: #d4eaf7;
@@ -48,6 +49,21 @@ nav {
     color: lightgray;
     font-weight: 400;
     font-size: 16px;
+    position: relative;
+}
+.menuItem::before {
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid white;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: all 0.25s ease;
+}
+.menuItem:hover::before {
+    transform: scaleX(1);
 }
 /* navbar end */
 /* slider start */
@@ -71,7 +87,7 @@ nav {
 }
 
 .sliderItem img {
-    height: 1000px;
+    height: 900px;
 }
 
 .sliderTitle{
@@ -91,7 +107,9 @@ nav {
   font-weight: 300;
   text-align: center;
   color: black;
+  padding: 10px;
   border: 1px solid #00668c;
+  border-radius: 10px;
   z-index: 1;
 }
 .buyBtn {
@@ -109,3 +127,83 @@ nav {
   background-color: #d4eaf7;
   color: black;
 }
+/* slider end  */
+/* features start */
+
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.featureIcon {
+    height: 50px;
+    width: 50px;
+}
+
+.featureTitle {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.featureDesc {
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    width: 200px;
+}
+
+
+/* feautures end  */
+/* product start */
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f4f1;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+.productImg {
+    height: 800px;
+}
+.productTitle {
+    font-weight: 700;
+}
+.productPrice {
+    font-weight: 400;
+}
+.productDesc {
+    margin-top: 25px;
+}
+.productDesc p{
+    display: inline-block;
+    width: 200px;
+}
+.productDesc div {
+    display: flex;
+    justify-content: center;
+}
+
+.productVariant {
+    display: flex;
+    justify-content: start;
+}
+.productVariant div {
+    border: 1px solid black;
+    padding: 10px;
+    margin-right: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.productVariant div:hover {
+    background-color: #d4eaf7;
+}
+
+/* product end */
