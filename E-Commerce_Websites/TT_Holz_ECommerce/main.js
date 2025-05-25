@@ -160,12 +160,28 @@ menuItems.forEach((item, index) => {
         //Holzegriff Variante ändern
         currProductVariant.forEach((value, index) => {
             value.textContent = choosenProduct.variants[index + 1].variant;
+            value.style.backgroundColor = "transparent";
         });
-    })
+    }); 
+});
+currProductVariant.forEach((variant, index) => {
+    variant.addEventListener('click', () => {
+        currProductImg.src = choosenProduct.variants[index + 1].img;
+        currProductVariant.forEach((variant) => {
+            variant.style.backgroundColor = "transparent";
+        });
+        variant.style.backgroundColor = "#d4eaf7";
+    });
+});
 
-    currProductVariant.forEach((variant, index) => {
-        variant.addEventListener('click', () => {
-            currProductImg.src = choosenProduct.variants[index + 1].img;
-        });
-    })
+const productBtn = document.querySelector('.productBtn');
+const paymentWindow = document.querySelector('.payment');
+const closePayment = document.querySelector('.close');
+
+productBtn.addEventListener('click', () => {
+    paymentWindow.style.display = "flex";
+});
+
+closePayment.addEventListener('click', () => {
+    paymentWindow.style.display = "none";
 });
