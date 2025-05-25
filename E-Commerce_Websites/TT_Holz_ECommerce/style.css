@@ -1,7 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     padding: 0;
     margin: 0;
     font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
 }
 
 /* navbar start */
@@ -87,7 +91,7 @@ nav {
 }
 
 .sliderItem img {
-    height: 900px;
+    height: 100vh;
 }
 
 .sliderTitle{

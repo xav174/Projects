@@ -21,15 +21,15 @@ products = [
             },
             {
                 variant: "Konkav (FL)",
-                img: "./assets/blade_boll_forte_iii_fl.jpg"
+                img: "./assets/blade_boll_forte_iii_fl.png"
             },
             {
                 variant: "Gerade (ST)",
-                img: "./assets/blade_boll_forte_iii_st.jpg"
+                img: "./assets/blade_boll_forte_iii_st.png"
             },
             {
                 variant: "Anatomisch (AN)",
-                img: "./assets/blade_boll_forte_iii_an.jpg"
+                img: "./assets/blade_boll_forte_iii_an.png"
             }
         ]
     }, {
@@ -51,15 +51,15 @@ products = [
             },
             {
                 variant: "Gerade (ST)",
-                img: "./assets/blade_fan_zhendong_zlc_st.jpg"
+                img: "./assets/blade_fan_zhen_dong_st.png"
             },
             {
                 variant: "Chinese Penhold (CS)",
-                img: "./assets/blade_fan_zhendong_zlc_cs.jpg"
+                img: "./assets/blade_fan_zhen_dong_cs.png"
             },
             {
                 variant: "Konkav (FL)",
-                img: "./assets/blade_fan_zhendong_zlc_fl.jpg"
+                img: "./assets/blade_fan_zhen_dong_fl.png"
             }
         ]
     }, {
@@ -81,15 +81,15 @@ products = [
             },
             {
                 variant: "Konkav (FL)",
-                img: "./assets/blade_ovtcharov_alc_fl.jpg"
+                img: "./assets/blade_ovtcharov_alc_fl.png"
             },
             {
                 variant: "Gerade (ST)",
-                img: "./assets/blade_ovtcharov_alc_st.jpg"
+                img: "./assets/blade_ovtcharov_alc_st.png"
             },
             {
                 variant: "Anatomisch (AN)",
-                img: "./assets/blade_ovtcharov_alc_an.jpg"
+                img: "./assets/blade_ovtcharov_alc_an.png"
             }
         ]
     }, {
@@ -111,15 +111,15 @@ products = [
             },
             {
                 variant: "Anatomisch (AN)",
-                img: "./assets/blade_zhang_jike_t5000_an.jpg"
+                img: "./assets/blade_zhang_jike_t5000_an.png"
             },
             {
                 variant: "Gerade (ST)",
-                img: "./assets/blade_zhang_jike_t5000_st.jpg"
+                img: "./assets/blade_zhang_jike_t5000_st.png"
             },
             {
                 variant: "Konkav (FL)",
-                img: "./assets/blade_zhang_jike_t5000_fl.jpg"
+                img: "./assets/blade_zhang_jike_t5000_fl.png"
             }
         ] 
     }
