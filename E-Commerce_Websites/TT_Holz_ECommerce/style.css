@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     padding: 0;
@@ -46,6 +47,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .menuItem {
     margin-right: 50px;
@@ -124,6 +126,7 @@ nav {
     border-radius: 25px;
     font-size: 24px;
     cursor: pointer;
+    position: absolute;
     top: 50%;
     right: 100px;
 }
@@ -138,6 +141,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .feature {
     display: flex;
@@ -175,9 +179,10 @@ nav {
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
     margin-top: 30px;
     position: relative;
+    flex-wrap: wrap;
 }
 .productImg {
-    height: 800px;
+    height: 100vh;
 }
 .productTitle {
     font-weight: 700;
@@ -204,7 +209,7 @@ nav {
 .productVariant div {
     border: 1px solid black;
     padding: 10px;
-    margin-right: 8px;
+    margin: 8px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -317,11 +322,54 @@ footer {
     background-color: #313d44;
 }
 
+.topFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fNewsletterTitle {
+    color: #f5f4f1;
+    font-size: 35px;
+}
+.fEmailInput {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+
+}
+.fEmailInput label {
+    color: black;
+    width: 100%;
+    font-weight: 700;
+}
+.fEmailInput input {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid grey;
+    font-size: 16px;
+}
+.fBtn {
+    margin-top: 5px;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: #313d44;
+    color: white;
+    cursor: pointer;
+}
+
+
 .bottomFooter {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    margin: 20px 40px;
+    margin: 50px 40px;
+    flex-wrap: wrap;
 }
 
 .colTitle {
@@ -338,7 +386,113 @@ footer {
     cursor: pointer;
     font-size: 14px;
 }
+.footerCol {
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 10px;
+}
 
-
+.footerIcon{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: #f5f4f1;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 /* footer end */
+
+/* media queries */
+@media screen and (max-width: 800px) {
+
+    .slider {
+        clip-path: none;
+    }
+   .sliderItem img {
+        width: 90%;
+        height: 90%;
+    }
+    .sliderTitle {
+        display: none;
+    }
+    .sliderPrice {
+        top: unset;
+        bottom: -20px;
+        left: 0;
+        font-size: 40px;
+    }
+    .buyBtn {
+        right: 0;
+        top: 0;
+    }
+    .product{
+        padding-bottom: 20px;
+    }
+
+    .productImg{
+        width: 80%;
+        height: 80%;
+    }
+    .productTitle {
+        text-align: center;
+    }
+    .feature {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        display: none;
+    }
+    .navBottom{
+        flex-direction: column;
+    }
+    .menuItem {
+        margin: 20px;
+    }
+
+    .slider {
+        clip-path: none;
+    }
+
+    .sliderItem img {
+        width: 90%;
+        height: 90%;
+    }
+    .sliderPrice {
+        top: unset;
+        bottom: -20px;
+        left: 0;
+        font-size: 40px;
+    }
+    .buyBtn {
+        right: 0;
+        top: 0;
+    }
+    
+    .product{
+        clip-path: none;
+    }
+    .productDetails{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .productDesc p {
+        width: 150px;
+    }
+
+    .feature{
+        margin: 0;
+    }
+
+
+    .bottomFooter {
+        flex-direction: column;
+    }
+}
