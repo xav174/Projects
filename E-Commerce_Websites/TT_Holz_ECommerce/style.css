@@ -331,6 +331,7 @@ footer {
 .fNewsletterTitle {
     color: #f5f4f1;
     font-size: 35px;
+    text-align: center;
 }
 .fEmailInput {
     background-color: white;
@@ -339,7 +340,7 @@ footer {
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-
+    width: 600px;
 }
 .fEmailInput label {
     color: black;
@@ -348,10 +349,9 @@ footer {
 }
 .fEmailInput input {
     padding: 10px;
-    width: 100%;
-    max-width: 400px;
     border: 1px solid grey;
     font-size: 16px;
+    width: 100%;
 }
 .fBtn {
     margin-top: 5px;
@@ -440,6 +440,9 @@ footer {
     }
     .feature {
         padding-top: 20px;
+    }
+    .fEmailInput{
+        width: 80%;
     }
 }
 
