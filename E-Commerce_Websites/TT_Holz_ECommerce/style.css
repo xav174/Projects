@@ -308,3 +308,37 @@ nav {
 
 
 /* product end */
+
+/* footer start */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #313d44;
+}
+
+.bottomFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 20px 40px;
+}
+
+.colTitle {
+    font-size: 20px;
+    color: white;
+}
+
+.fList {
+    list-style: none;
+    padding: 0;
+}
+.fListItem {
+    color: lightgrey;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+
+/* footer end */
