@@ -401,6 +401,10 @@ footer {
     border-radius: 50%;
     cursor: pointer;
 }
+.fInfoText {
+    font-size: 0.8rem;
+    color: grey;
+}
 
 /* footer end */
 
@@ -441,6 +445,18 @@ footer {
     .feature {
         padding-top: 20px;
     }
+
+    .payment {
+        width: 70%;
+        height: 700px;
+    }
+    .cardInfo {
+        flex-direction: column;
+    }
+    .cardInfo input {
+        margin-top: 10px;
+    }
+
     .fEmailInput{
         width: 80%;
     }
