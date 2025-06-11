@@ -414,7 +414,7 @@ footer {
     .slider {
         clip-path: none;
     }
-   .sliderItem img {
+    .sliderItem img {
         width: 90%;
         height: 90%;
     }
@@ -433,6 +433,7 @@ footer {
     }
     .product{
         padding-bottom: 20px;
+        clip-path: none;
     }
 
     .productImg{
