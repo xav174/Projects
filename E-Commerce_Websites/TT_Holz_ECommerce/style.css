@@ -344,20 +344,21 @@ nav {
 .gItemTitle {
     position: absolute;
     left: 10%;
-    bottom: 4%;
+    bottom: 8%;
     color: black;
     font-weight: 700;
+    font-size: clamp(1.125rem, 0.375rem + 2.4vw, 1.875rem);
 }
 .gItemBtn {
     position: absolute;
     left: 10%;
-    bottom: 3%;
+    bottom: 5%;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 5px 15px;
     background-color: #313d44;
     color: white;
-
+    cursor: pointer;
 }
 
 
@@ -507,6 +508,13 @@ footer {
         margin-top: 10px;
     }
 
+    .gItems {
+        flex-direction: column;
+    }
+    .gItemTitle {
+        font-size: clamp(1rem, -1rem + 6.4vw, 3rem);
+    }
+
     .fEmailInput{
         width: 80%;
     }
@@ -560,6 +568,9 @@ footer {
         margin: 0;
     }
 
+    .gTitle {
+        font-size: 25px;
+    }
 
     .bottomFooter {
         flex-direction: column;
