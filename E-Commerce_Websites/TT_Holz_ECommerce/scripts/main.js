@@ -3,6 +3,25 @@ import {products} from "../data/product.js"
 const wrapper = document.querySelector('.sliderWrapper');
 const menuItems = document.querySelectorAll('.menuItem');
 
+let sliderHTML = '';
+
+products.forEach((product, i) => {
+    sliderHTML += `
+        <div class="sliderItem">
+            <img src="${product.variants[0].img}" alt="${product.title}">
+            <div class="sliderBg"></div>
+            <h1 class="sliderTitle">${product.title}</h1>
+            <h2 class="sliderPrice">${product.price}€</h2>
+            <a href="#product">
+                <button class="buyBtn btn">BUY NOW!</button>
+            </a>
+        </div>
+    `
+});
+
+console.log(sliderHTML);
+document.querySelector('.js-sliderWrapper').innerHTML = sliderHTML;
+
 
 let choosenProduct = products[0];
 
