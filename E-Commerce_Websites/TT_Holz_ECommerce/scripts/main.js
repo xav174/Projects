@@ -1,4 +1,5 @@
 import {products} from "../data/product.js"
+import { convertCentsToEuro } from "./currency.js";
 
 const wrapper = document.querySelector('.sliderWrapper');
 const menuItems = document.querySelectorAll('.menuItem');
@@ -11,7 +12,7 @@ products.forEach((product, i) => {
             <img src="${product.variants[0].img}" alt="${product.title}">
             <div class="sliderBg"></div>
             <h1 class="sliderTitle">${product.title}</h1>
-            <h2 class="sliderPrice">${product.price}€</h2>
+            <h2 class="sliderPrice">${convertCentsToEuro(product.priceCents)}€</h2>
             <a href="#product">
                 <button class="buyBtn btn">BUY NOW!</button>
             </a>
@@ -46,7 +47,7 @@ menuItems.forEach((item, index) => {
 
         //product details ändern
         currProductTitle.textContent = choosenProduct.title;
-        currProductPrice.textContent = choosenProduct.price + "€";
+        currProductPrice.textContent = convertCentsToEuro(choosenProduct.priceCents) + "€";
         currProductImg.src = choosenProduct.variants[0].img;
 
         currTempo.textContent = choosenProduct.description.tempo;

@@ -2,7 +2,7 @@ export const products = [
     {
         id: 1,
         title: "Boll Forte III",
-        price: "59,90",
+        priceCents: 5990,
         description: 
             {
                 tempo: 9.3,
@@ -32,7 +32,7 @@ export const products = [
     }, {
         id: 2,
         title: "Fan Zhendong ZLC",
-        price: "239,90",
+        priceCents: 23990,
         description: 
             {
                 tempo: 11.7,
@@ -62,7 +62,7 @@ export const products = [
     }, {
         id: 3,
         title: "Dimitrij Ovtcharov Innerforce ALC",
-        price: "179,90",
+        priceCents: 17990,
         description: 
             {
                 tempo: 11.7,
@@ -92,7 +92,7 @@ export const products = [
     }, {
         id: 4,
         title: "Zhang Jike T5000",
-        price: "159,90",
+        priceCents: 15990,
         description: 
             {
                 tempo: 12.6,
