@@ -84,3 +84,15 @@ productBtn.addEventListener('click', () => {
 closePayment.addEventListener('click', () => {
     paymentWindow.style.display = "none";
 });
+
+window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && paymentWindow.style.display === "flex") {
+        paymentWindow.style.display = "none";
+    }
+});
+
+document.addEventListener('click', (event) => {
+    if (!paymentWindow.contains(event.target) && !productBtn.contains(event.target)) {
+        paymentWindow.style.display = "none";
+    }
+});

@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* navbar start */
 nav {
   background-color: #313d44;
