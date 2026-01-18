@@ -6,11 +6,11 @@ const FoodItem = ({ item, onDelete}) => {
     const today = new Date(); //heute
     today.setHours(0, 0, 0, 0); //Setzt die Uhrzeit auf Null damit wir nur die Kalendar Tage vergleichen
 
-    const expiryDate = new Date(expiryDate); //Ablaufdatum
-    expiryDate.setHours(0, 0, 0, 0);
+    const expiry = new Date(expiryDate); //Ablaufdatum
+    expiry.setHours(0, 0, 0, 0);
 
     //berechne die Differenz in Millisekunden
-    const diffInMs = expiryDate - today;
+    const diffInMs = expiry - today;
 
     //Umrechnung in Tage
     const diffInDays = Math.ceil(diffInMs / (1000 * 60 * 60 * 24));
@@ -19,6 +19,7 @@ const FoodItem = ({ item, onDelete}) => {
   };
 
   const remainingDays = calculateDaysRemaining(item.expiryDate);
+  console.log(remainingDays);
 
   return (
     <>
@@ -31,8 +32,8 @@ const FoodItem = ({ item, onDelete}) => {
           </div>
         </div>
         <div className="item-status">
-          <span class="tag">Abgelaufen</span>
-          <p class="status-date">Gestern</p>
+          <span className="tag">Abgelaufen</span>
+          <p className="status-date">Gestern</p>
         </div>
       </div> 
     </>
