@@ -25,7 +25,7 @@ const FoodItem = ({ item, onDelete}) => {
     <>
       <div className="item-card">
         <div className="item-info">
-          <div className="item-icon"></div>
+          <div className="item-icon">{/* Icons */}</div>
           <div>
             <h4 className="item-name">{item.name}</h4>
             <p className="item-count">{item.quantity}</p>
