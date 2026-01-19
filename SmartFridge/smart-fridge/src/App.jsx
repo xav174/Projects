@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import FoodItem from './components/FoodItem.jsx'
+import Navbar from './components/Navbar.jsx';
 
 function App() {
   //veränderbare Liste zum testen
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+    <Navbar/>
     <div>
       {inventory.map((singleItem) => (
         <FoodItem

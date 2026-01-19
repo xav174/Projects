@@ -22,6 +22,97 @@ body {
     line-height: 1.5;
 }
 
+/* Header Section start */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+
+.header-content {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  display: flex;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.nav-link.active , .nav-link:hover {
+  color: var(--primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.counter {
+  border: 1px solid var(--border);
+  background-color: rgba(15, 184, 111, 0.1);
+  color: var(--primary);
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.icon-btn {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 6px;
+  border: none;
+  display: flex;
+  color: black;
+  cursor: pointer;
+}
+
+.user-avatar {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 6px;
+  border: none;
+  display: flex;
+  color: black;
+  cursor: pointer;
+}
+
+/* Header Section end */
+
+/* Inventory Section start */
 .item-card {
     display: flex;
     justify-content: space-between;
