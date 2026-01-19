@@ -134,7 +134,7 @@ body {
 }
 
 .tag {
-    font-size: 10px;
+    font-size: 0.7rem;
     font-weight: 700;
     padding: 2px 8px;
     border-radius: 4px;
@@ -142,8 +142,10 @@ body {
 }
 
 .status-date {
-    font-size: 10px;
+    font-size: 0.7rem;
     font-weight: 700;
     padding: 2px 8px;
     border-radius: 4px;
+    display: flex;
+    justify-content: end;
 }
