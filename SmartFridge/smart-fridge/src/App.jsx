@@ -11,6 +11,8 @@ function App() {
     { id: 3, name: "Spinat", quantity: 500, unit: "Gramm", expiryDate: "2026-01-20" }
   ]);
 
+  let inventoryLength = inventory.length;
+
   const deleteItem = (id) => {
     //Wir erstellen eine Kopie der inventory-liste mit allen items die die zu löschende id nicht hat
     const updatedInventory = inventory.filter(item => item.id ==! id);
@@ -19,7 +21,7 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+    <Navbar inventoryLength={inventoryLength}/>
     <div>
       {inventory.map((singleItem) => (
         <FoodItem

@@ -1,4 +1,4 @@
-const Navbar = () => {
+const Navbar = ({ inventoryLength }) => {
   
   
   return (
@@ -22,7 +22,7 @@ const Navbar = () => {
           </nav>
 
           <div className="header-actions">
-            <div className="counter">Gesamt: 42</div>
+            <div className="counter">Gesamt: {inventoryLength}</div>
             <div className="icon-btn">
               <span className="material-symbols-outlined">notifications</span>
             </div>
