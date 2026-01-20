@@ -38,7 +38,7 @@ const FoodItem = ({ item, onDelete}) => {
 
   return (
     <>
-      <div className="item-card">
+      <div className="item-card" style={{borderLeft: `4px solid ${statusColor}`}}>
         <div className="item-info">
           <div className="item-icon">{/* Icons */}</div>
           <div>
