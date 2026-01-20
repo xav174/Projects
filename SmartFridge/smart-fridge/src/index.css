@@ -13,6 +13,8 @@
     --border: #e2e8f0;
     --danger: #ef4444;
     --warning: #f59e0b;
+
+    --text-normal: 0.825rem;
 }
 
 body {
@@ -132,9 +134,13 @@ body {
     align-items: center;
     gap: 1rem;
 }
+.item-count {
+  font-size: var(--text-normal);
+  color: var(--text-muted);
+}
 
 .tag {
-    font-size: 0.7rem;
+    font-size: var(--text-normal);
     font-weight: 700;
     padding: 2px 8px;
     border-radius: 4px;
@@ -142,7 +148,7 @@ body {
 }
 
 .status-date {
-    font-size: 0.7rem;
+    font-size: var(--text-normal);
     font-weight: 700;
     padding: 2px 8px;
     border-radius: 4px;
