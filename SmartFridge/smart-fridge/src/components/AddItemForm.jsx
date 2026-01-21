@@ -71,16 +71,17 @@ const AddItemForm = ({ onAddItem }) => {
                 <option>kg</option>
               </select>
             </div>
-            <div className="input-group">
-              <label htmlFor="input-expiry">Ablaufdatum</label>
-              <input 
-                type="date"
-                value={date} 
-                onChange={(e) => setDate(e.target.value)}
-                id="input-expiry"/>
-            </div>
-            <button type="submit" className="input-submit-btn">Hinzufügen</button>
           </div>
+
+          <div className="input-group">
+            <label htmlFor="input-expiry">Ablaufdatum</label>
+            <input 
+              type="date"
+              value={date} 
+              onChange={(e) => setDate(e.target.value)}
+              id="input-expiry"/>
+          </div>
+          <button type="submit" className="input-submit-btn">Hinzufügen</button>
         </form>
       </div>
     </>
