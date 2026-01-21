@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import FoodItem from './components/FoodItem.jsx'
 import Navbar from './components/Navbar.jsx';
+import AddItemForm from './components/AddItemForm.jsx';
 
 function App() {
   //veränderbare Liste zum testen
@@ -20,9 +21,17 @@ function App() {
     setInventory(updatedInventory);
   };
 
+  //Neues Item ins Inventory hinzufügen
+  const addItem = (newItem) => {
+    setInventory([newItem, ...inventory]);
+  };
+
+  console.log(inventory);
+
   return (
     <>
     <Navbar inventoryLength={inventoryLength}/>
+    <AddItemForm onAddItem={addItem}/>
     <div>
       {inventory.map((singleItem) => (
         <FoodItem
