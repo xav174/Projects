@@ -37,7 +37,7 @@ const AddItemForm = ({ onAddItem }) => {
       <div className="card">
         <div className="card-header">
           <h4 className="card-title">
-            <span class="material-symbols-outlined">add_circle</span> Neu hinzufügen
+            <span className="material-symbols-outlined">add_circle</span> Neu hinzufügen
           </h4>
         </div>
         <form onSubmit={handleSubmit} className="quick-add-form">

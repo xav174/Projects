@@ -43,8 +43,8 @@ function App() {
   return (
     <>
     <Navbar inventoryLength={inventoryLength}/>
-    <SummaryStats expired={expiredItems} critical={criticalItems} positive={positiveItems} />
     <div className='dashboard-container'>
+      <SummaryStats expired={expiredItems} critical={criticalItems} positive={positiveItems} />
       <section className='sidebar'>
         <AddItemForm onAddItem={addItem}/>
       </section>

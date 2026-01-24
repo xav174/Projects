@@ -12,11 +12,13 @@ const SummaryStats = ({ expired, critical, positive }) => {
                 Über 2 Tage
               </p>
               <h3 className="stat-value">{positive}</h3>
-              <span class="material-symbols-outlined icon-bg">inventory_2</span>
+            </div>
+            <div className="stat-icon positive">
+              <span className="material-symbols-outlined icon-bg">inventory_2</span>
             </div>
           </div>
           <div className="stat-footer positive">
-            <span class="material-symbols-outlined">trending_up</span> +2 heute
+            <span className="material-symbols-outlined">trending_up</span> +2 heute
           </div>
         </div>
         
@@ -27,11 +29,13 @@ const SummaryStats = ({ expired, critical, positive }) => {
                 Läuft bald ab
               </p>
               <h3 className="stat-value">{critical}</h3>
-              <span class="material-symbols-outlined icon-bg">warning</span>
+            </div>
+            <div className="stat-icon warning">
+              <span className="material-symbols-outlined icon-bg">warning</span>
             </div>
           </div>
-          <div className="stat-footer positive">
-            <span class="material-symbols-outlined">schedule</span> Innerhalb von 2 Tagen
+          <div className="stat-footer warning">
+            <span className="material-symbols-outlined">schedule</span> Innerhalb von 2 Tagen
           </div>
         </div>
         
@@ -42,11 +46,13 @@ const SummaryStats = ({ expired, critical, positive }) => {
                 Abgelaufen
               </p>
               <h3 className="stat-value">{expired}</h3>
-              <span class="material-symbols-outlined icon-bg">error</span>
+            </div>
+            <div className="stat-icon danger">
+              <span className="material-symbols-outlined icon-bg">error</span>
             </div>
           </div>
           <div className="stat-footer danger">
-            <span class="material-symbols-outlined">delete_forever</span> Handlungsbedarf
+            <span className="material-symbols-outlined">delete_forever</span> Handlungsbedarf
           </div>
         </div>
 

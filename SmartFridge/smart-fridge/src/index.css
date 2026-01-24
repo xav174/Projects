@@ -117,17 +117,102 @@ body {
 
 /* Header Section end */
 
+/* SummaryStats Section start */
+
+.stats-grid {
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid var(--border);
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: var(--text-normal);
+}
+
+.stat-value {
+  font-size: 1.8rem;
+}
+
+.stat-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-normal);
+}
+
+.stat-icon.positive {
+  display: flex;
+  background: rgba(15, 184, 111, 0.1);
+  padding: 0.4rem;
+  border-radius: 8px;
+}
+.stat-icon.warning {
+  display: flex;
+  background: #fef3c7;
+  padding: 0.4rem;
+  border-radius: 8px;
+}
+.stat-icon.danger {
+  display: flex;
+  background: #fee2e2;
+  padding: 0.4rem;
+  border-radius: 8px;
+}
+
+.positive {
+  color: var(--primary);
+}
+
+.warning {
+  color: var(--warning);
+}
+
+.danger {
+  color: var(--danger);
+}
+
+/* SummaryStats Section end */
+
+
+
+
 .dashboard-container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
   align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .sidebar {
+  grid-column: 1 / 2;
   position: sticky;
-  top: 10%;
-  
+  top: 12%; 
+}
+
+.inventory-list {
+  grid-column: 2/4;
 }
 
 /* Add-Item-Form Section start */
@@ -162,8 +247,8 @@ body {
 
 .input-group label {
   display: block;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: var(--text-normal);
+  font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--text-muted);
 }
