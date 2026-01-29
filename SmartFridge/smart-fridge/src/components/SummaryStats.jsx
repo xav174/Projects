@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SummaryStats = ({ expired, critical, positive }) => {
+const SummaryStats = ({ expired, critical, total }) => {
   
   return (
     <>
@@ -9,9 +9,9 @@ const SummaryStats = ({ expired, critical, positive }) => {
           <div className="stat-header">
             <div>
               <p className="stat-label">
-                Über 2 Tage
+                Gesamtmenge
               </p>
-              <h3 className="stat-value">{positive}</h3>
+              <h3 className="stat-value">{total}</h3>
             </div>
             <div className="stat-icon positive">
               <span className="material-symbols-outlined icon-bg">inventory_2</span>
