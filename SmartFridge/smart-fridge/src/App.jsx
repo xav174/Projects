@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import './App.css'
 import FoodItem from './components/FoodItem.jsx'
 import Navbar from './components/Navbar.jsx';
@@ -7,19 +7,29 @@ import SummaryStats from './components/SummaryStats.jsx';
 import { calculateDaysRemaining } from './utils/dateUtils.js';
 
 function App() {
-  //veränderbare Liste zum testen
-  const [inventory, setInventory ] = useState([
-    { id: 1, name: "Milch", quantity: 1, unit: "Liter", expiryDate: "2026-01-15" },
-    { id: 2, name: "Eier", quantity: 6, unit: "Stk", expiryDate: "2026-01-23" },
-    { id: 3, name: "Hühnerbrustfilet", quantity: 400, unit: "g", expiryDate: "2026-01-25" },
-    { id: 4, name: "Spinat", quantity: 500, unit: "g", expiryDate: "2026-03-20" }
-  ]);
+  // 1. State initialisieren: Wir schauen direkt im localStorage nach,
+  // bevor wir die Standardwerte setzen.
+  const [inventory, setInventory] = useState(() => {
+    const savedInventory = localStorage.getItem('myInventory');
+    if (savedInventory) {
+      // Wenn was gefunden wurde, verwandeln wir den Text zurück in ein JavaScript-Array
+      return JSON.parse(savedInventory);
+    } else {
+      // Wenn nichts gefunden wurde, nehmen wir deine Test-Liste
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    // localStorage kann nur Text speichern, daher wandeln wir das Array mit JSON.stringify um
+    localStorage.setItem('myInventory', JSON.stringify(inventory));
+  }, [inventory]); // Das Array hier sagt: Führe das nur aus, wenn 'inventory' sich ändert  
 
   let inventoryLength = inventory.length;
 
   const deleteItem = (id) => {
     //Wir erstellen eine Kopie der inventory-liste mit allen items die die zu löschende id nicht hat
-    const updatedInventory = inventory.filter(item => item.id ==! id);
+    const updatedInventory = inventory.filter(item => item.id !== id);
     setInventory(updatedInventory);
   };
 
