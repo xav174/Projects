@@ -34,6 +34,20 @@ const FoodItem = ({ item, onDelete}) => {
         <div className="item-status">
           <span className="tag" style={dynamicStyle}>{statusText}</span>
           <p className="status-date">{remainingDays}</p>
+          <button 
+            className="delete-item-btn" 
+            onClick={() => onDelete(item.id)}
+            title="Artikel löschen"
+            style={{
+              background: 'none',
+              border: 'none',
+              color: '#ef4444',
+              cursor: 'pointer',
+              marginLeft: '10px'
+            }}
+          >
+            <span className="material-symbols-outlined">delete</span>
+          </button>
         </div>
       </div> 
     </>
