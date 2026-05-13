@@ -1,5 +1,12 @@
+import React, { useState } from 'react';
 const Navbar = ({ inventoryLength }) => {
-  
+  // State für das Menü (offen / geschlossen)
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Funktion zum Umschalten
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   
   return (
     <>
@@ -13,24 +20,34 @@ const Navbar = ({ inventoryLength }) => {
             </div>
             <h2 className="brand-name">SmartFridge</h2>
           </div>
-          
-          <nav className="main-nav">
-            <a className="nav-link active" href="#">Dashboard</a>
-            <a className="nav-link" href="#">Bestand</a>
-            <a className="nav-link" href="#">Rezepte</a>
-            <a className="nav-link" href="#">Einstellungen</a>
-          </nav>
 
-          <div className="header-actions">
-            <div className="counter">Gesamt: {inventoryLength}</div>
-            <div className="icon-btn">
-              <span className="material-symbols-outlined">notifications</span>
-            </div>
-            <div className="user-avatar">
-              <span className="material-symbols-outlined">account_circle</span>
-            </div>
+          {/* NEU: Hamburger-Button */}
+          <button className="hamburger-btn" onClick={toggleMenu}>
+            <span className="material-symbols-outlined">
+              {isOpen ? 'close' : 'menu'}
+            </span>
+          </button>
+          
+          <div className={`nav-wrapper ${isOpen ? 'open' : ''}`}>
+              <nav className="main-nav">
+                <a className="nav-link active" href="#">Dashboard</a>
+                <a className="nav-link" href="#">Bestand</a>
+                <a className="nav-link" href="#">Rezepte</a>
+                <a className="nav-link" href="#">Einstellungen</a>
+              </nav>
+
+              <div className="header-actions">
+                <div className="counter">Gesamt: {inventoryLength}</div>
+                <div className="icon-btn">
+                  <span className="material-symbols-outlined">notifications</span>
+                </div>
+                <div className="user-avatar">
+                  <span className="material-symbols-outlined">account_circle</span>
+                </div>
+              </div>
           </div>
-        </div>
+
+        </div>        
       </header>
     </>
   )

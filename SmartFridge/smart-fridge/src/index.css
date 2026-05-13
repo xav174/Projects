@@ -339,3 +339,109 @@ body {
 }
 /* Inventory-Section end */
 
+/* --- Hamburger Button (Desktop: versteckt) --- */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-main);
+  padding: 4px;
+}
+
+/* Flexbox für den neuen Wrapper auf dem Desktop */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  /* Nimmt den restlichen Platz ein und drückt sich nach rechts */
+  flex: 1; 
+  justify-content: space-evenly;
+  margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+
+  /* Header umbauen */
+  .header-content {
+    position: relative; /* Für das Dropdown */
+  }
+
+  /* Hamburger-Button auf dem Handy anzeigen */
+  .hamburger-btn {
+    display: block;
+    margin-left: auto; /* Drückt den Button ganz nach rechts */
+  }
+
+  /* Den Wrapper (Nav + Aktionen) verstecken und als Dropdown stylen */
+  .nav-wrapper {
+    display: none; /* Standardmäßig zu */
+    flex-direction: column;
+    align-items: flex-start; /* Linksbündig auf dem Handy */
+    gap: 1.5rem;
+    margin-left: 0;
+    position: absolute;
+    top: 64px; /* Höhe deines Headers */
+    left: -1.5rem; 
+    right: -1.5rem;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Diese Klasse wird durch React hinzugefügt (isOpen === true) */
+  .nav-wrapper.open {
+    display: flex;
+  }
+
+  /* Navigation auf dem Handy untereinander */
+  .main-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  /* Die Aktionen im Menü nach unten schieben */
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  
+  /* Das Haupt-Raster wird einspaltig */
+  .dashboard-container {
+    grid-template-columns: 1fr; 
+    gap: 2rem; /* Etwas mehr Raum zwischen den Sektionen */
+    padding-bottom: 2rem; /* Platz nach unten am Bildschirmrand */
+  }
+
+  /* Die Statistiken untereinander statt nebeneinander */
+  .stats-grid {
+    grid-column: 1 / -1; /* Nimmt die volle Breite ein */
+    grid-template-columns: 1fr; /* 1 Spalte für Stats auf dem Handy */
+    gap: 1rem;
+  }
+
+  /* Das Formular (Sidebar) anpassen */
+  .sidebar {
+    grid-column: 1 / -1;
+    position: static; /* WICHTIG: Hebt das 'sticky' auf, sonst verdeckt das Formular beim Scrollen die ganze Liste */
+    margin-bottom: 1rem; /* Extra Raum zwischen Formular und Liste */
+  }
+
+  /* Die Liste anpassen */
+  .inventory-list {
+    grid-column: 1 / -1;
+  }
+
+  /* Den Header etwas kompakter machen */
+  .header-content {
+    flex-wrap: wrap; /* Erlaubt Umbrüche, falls der Platz zu eng wird */
+  }
+
+  .main-nav {
+    gap: 1rem;
+  }
+}

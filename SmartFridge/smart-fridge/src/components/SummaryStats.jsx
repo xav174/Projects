@@ -18,7 +18,7 @@ const SummaryStats = ({ expired, critical, total }) => {
             </div>
           </div>
           <div className="stat-footer positive">
-            <span className="material-symbols-outlined">trending_up</span> +2 heute
+            <span className="material-symbols-outlined">trending_up</span> Gesamt
           </div>
         </div>
         
