@@ -5,18 +5,24 @@ const AddItemForm = ({ onAddItem }) => {
   
   const [name, setName] = useState('');
   const [quantity, setQuantity] = useState(1);
-  const [unit, setUnit] = useState('');
+  const [unit, setUnit] = useState('Stk');
   const [date, setDate] = useState('');
 
   const handleSubmit = (e) => {
     //Neuladen der Seite verhindern
     e.preventDefault(); 
 
+    //Checkt ob felder leer sind falls ja wird die Funktion abgebrochen
+    if (!name.trim() || quantity === '' || !unit || !date) {
+      alert('Bitte fülle alle Felder aus, bevor du den Artikel hinzufügst.');
+      return; // Bricht die Funktion hier sofort ab
+    }
+
     //Neues Objekt erstellen
     const newItem = {
       id: Date.now(), //Temporäre ID
       name: name,
-      quantity: quantity,
+      quantity: quantity === ''? 1 : quantity,
       unit: unit,
       expiryDate: date
     };
@@ -26,7 +32,7 @@ const AddItemForm = ({ onAddItem }) => {
     //reset values
     setName('');
     setQuantity(1);
-    setUnit('');
+    setUnit('Stk');
     setDate('');
   };
 
@@ -47,7 +53,8 @@ const AddItemForm = ({ onAddItem }) => {
               type="text" 
               value={name} 
               onChange={(e) => setName(e.target.value)} 
-              id="input-item-name" placeholder="z.B. Iced Matcha Latte"/>
+              id="input-item-name" placeholder="z.B. Iced Matcha Latte"
+              required/>
           </div>
           <div className="input-row">
             <div className="input-group">
@@ -55,8 +62,17 @@ const AddItemForm = ({ onAddItem }) => {
               <input 
                 type="number" 
                 value={quantity}
-                onChange={(e) => setQuantity(e.target.value)}
-                id="input-quantity"/>
+                onChange={(e) => {
+                  const val = e.target.value;
+                  // Erlaube leere Eingabe (zum Löschen), ansonsten erzwinge Minimum von 1
+                  if (val === '') {
+                    setQuantity('');
+                  } else {
+                    setQuantity(Math.max(1, parseInt(val, 10) || 1));
+                  }
+                }}
+                id="input-quantity"
+                required/>
             </div>
             <div className="input-group">
               <label htmlFor="input-unit">Einheit</label>
@@ -64,7 +80,8 @@ const AddItemForm = ({ onAddItem }) => {
                 value={unit}
                 onChange={(e) => setUnit(e.target.value)}
                 name="input-unit" 
-                id="input-unit">
+                id="input-unit
+                required">
                 <option>Stk</option>
                 <option>Liter</option>
                 <option>g</option>
@@ -79,7 +96,8 @@ const AddItemForm = ({ onAddItem }) => {
               type="date"
               value={date} 
               onChange={(e) => setDate(e.target.value)}
-              id="input-expiry"/>
+              id="input-expiry
+              required"/>
           </div>
           <button type="submit" className="input-submit-btn">Hinzufügen</button>
         </form>
